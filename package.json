@@ -1,0 +1,20 @@
+{
+  "name": "pigmentum",
+  "version": "1.0.0",
+  "description": "Library who provide tools to play with colors",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Steven Clerc",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  },
+  "compilerOptions": {
+    "outDir": "./dist"
+  }
+}
