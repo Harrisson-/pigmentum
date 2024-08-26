@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { hextoRGB, rgbToHex, buildPalette } from '../index'
+import { hextoRGB, rgbToHex, buildPalette } from '../lib'
 
 test('translate 6-digit hex color into array [R, G, B]', () => {
   expect(hextoRGB("#32a852")).toStrictEqual([50, 168, 82]);
@@ -44,7 +44,7 @@ test('build color gradiant with 5 colors and 9 steps between colors', () => {
         "#ebbb2e",
         "#f3cc1f",
         "#fbdd10",
-        "#103ee01",
+        "#ffee01",
         "#ffee03",
         "#ebe912",
         "#d7e421",

@@ -41,11 +41,10 @@ function createPalette(colorsArray: number[][], steps: number): number[][] {
 
     for(let step = 0; step <= steps; step++) {
       palette[colorIndex] = [];
-      palette[colorIndex].push(
-        startColor[0] + (rRatio * step),
-        startColor[1] + (gRatio * step),
-        startColor[2] + (bRatio * step),
-      );
+      const r = startColor[0] + (rRatio * step) <= 255 ? startColor[0] + (rRatio * step) : 255;
+      const g = startColor[1] + (gRatio * step) <= 255 ? startColor[1] + (gRatio * step) : 255;
+      const b = startColor[2] + (bRatio * step) <= 255 ? startColor[2] + (bRatio * step) : 255;
+      palette[colorIndex].push(r, g, b);
       colorIndex += 1;
     }
     palette[colorIndex] = endColor;
